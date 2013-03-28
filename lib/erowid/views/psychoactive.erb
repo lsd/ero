@@ -1,0 +1,37 @@
+<div id="bodycontainer">
+
+<a href="/">
+<div class="smallheader">
+  <h5>&lsaquo; Back</h5>
+  <h4>The Vaults of Erowid</h4>
+</div>
+</a>
+
+<div class="psychoactive">
+  <img src="<%= @psychoactive.image_url %>" alt="Photo of <%= @psychoactive.name %>" />
+
+  <h1><%= @psychoactive.name %></h1>
+
+  <div class="names">
+    <h2>Common Names</h2>
+    <p><%= @psychoactive.common_names %></p>
+  </div>
+  <div class="effects">
+    <h2>Effects</h2>
+    <p><%= @psychoactive.effects %></p>
+  </div>
+  <div class="chemicalname">
+    <h2>Chemical Name</h2>
+    <p><%= @psychoactive.chemical_name || '<i>none</i>' %></p>
+  </div>
+  <div class="description">
+    <h2>Description</h2>
+    <p><%= @psychoactive.description %></p>
+  </div>
+</div>
+
+<div class="footer">
+  <a href="<%= @psychoactive.url %>">view on non-mobile site</a>
+</div>
+
+</div>

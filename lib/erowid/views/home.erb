@@ -1,0 +1,39 @@
+<div id="homecontainer">
+
+<div class="header">
+  <div class="title">
+    <img src="/images/erowid-logo.png" />
+    <div>
+      <h2>The Vaults of</h2>
+      <h1>Erowid</h1>
+    </div>
+    <hr/>
+  </div>
+  <div class="description">
+    <p>Erowid provides factual information on psychoactive drugs to medical professionals, academics, and recreational users.</p>
+    <p><a href="/about">Learn more &#8250;</a></p>
+  </div>
+</div>
+
+<div class="search">
+  <h4>Search for a psychoactive:</h4>
+  <form action="/search" method="get">
+    <input type="text" name="q" />
+    <input type="submit" value="Go" />
+  </form>
+</div>
+
+<div class="browse">
+  <h4>Or browse popular psycoactives:</h4>
+  <ul>
+    <% ErowidScraper.common_psychoactives.each do |slug, psychoactive| %>
+      <a href="/psychoactives/<%= slug %>"><li><%= psychoactive.name %><span>&#8250;</span></li></a>
+    <% end %>
+  </ul>
+</div>
+
+<div class="footer">
+  <a href="http://www.erowid.org/">view non-mobile site</a>
+</div>
+
+</div>
